@@ -8,7 +8,7 @@ variable "project_id" {
 variable "region" {
   description = "GCP region for deployment."
   type        = string
-  default     = "us-central"  # Default region if none is provided
+  #default     = "us-central"  # Default region if none is provided
 }
 
 variable "datastore_name" {
