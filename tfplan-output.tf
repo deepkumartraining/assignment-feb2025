@@ -1,9 +1,4 @@
-student_03_fd5aca21e3ed@cloudshell:~/assignment-feb2025 (qwiklabs-gcp-02-9cb195187372)$ terraform show tfplan
-
-Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
-  + create
-
-Terraform will perform the following actions:
+#Terraform will perform the following actions:
 
   # google_app_engine_application.app will be created
   + resource "google_app_engine_application" "app" {
@@ -17,7 +12,7 @@ Terraform will perform the following actions:
       + id                = (known after apply)
       + location_id       = "us-central1"
       + name              = (known after apply)
-      + project           = "qwiklabs-gcp-02-9cb195187372"
+      + project           = "project-id"
       + serving_status    = (known after apply)
       + url_dispatch_rule = (known after apply)
     }
@@ -26,7 +21,7 @@ Terraform will perform the following actions:
   + resource "google_project_service" "datastore" {
       + disable_on_destroy = true
       + id                 = (known after apply)
-      + project            = "qwiklabs-gcp-02-9cb195187372"
+      + project            = "project-id"
       + service            = "datastore.googleapis.com"
     }
 
