@@ -31,29 +31,18 @@ resource "google_firestore_index" "indexes" {
   count      = length(var.indexes)
   project    = var.project_id
   collection = var.kind_name
-  name       = var.indexes[count.index].index_name
-
-  dynamic "fields" {
-    for_each = var.indexes[count.index].properties
-    content {
-      field_path = fields.value.property_name
-      order      = fields.value.order
-    }
+  fields {
+    field_path = var.indexes[count.index].properties[0].property_name
+    order      = var.indexes[count.index].properties[0].order
   }
-}
 
-# Outputs for reference
-output "datastore_project" {
-  value       = var.project_id
-  description = "The GCP Project ID where Datastore is set up."
-}
+  #name       = var.indexes[count.index].index_name
 
-output "region" {
-  value       = var.region
-  description = "The GCP region where the Datastore instance is deployed."
-}
-
-output "kind_name" {
-  value       = var.kind_name
-  description = "The name of the Datastore Kind."
+  #dynamic "fields" {
+  #  for_each = var.indexes[count.index].properties
+  #  content {
+  #    field_path = fields.value.property_name
+  #    order      = fields.value.order
+  #  }
+  #}
 }
