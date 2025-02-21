@@ -40,21 +40,23 @@ module "datastore" {
 ```
 ## Inputs
 
-project_id: The GCP project ID.
-region: The region where resources will be created.
-datastore_name: The name of the Datastore.
-kind_name: The Kind name in Datastore.
-indexes: A list of index configurations for the Datastore Kind.
+- project_id: The GCP project ID.
+- region: The region where resources will be created.
+- datastore_name: The name of the Datastore.
+- kind_name: The Kind name in Datastore.
+- indexes: A list of index configurations for the Datastore Kind.
 
 ## Outputs
-datastore_project: The GCP Project ID where Datastore is set up.
-region: The GCP region where the Datastore instance is deployed.
-kind_name: The name of the Datastore Kind.
-datastore_instance: The Firestore in Datastore mode instance name.
-indexes_created: List of created indexes for the Datastore kind.
+- datastore_project: The GCP Project ID where Datastore is set up.
+- region: The GCP region where the Datastore instance is deployed.
+- kind_name: The name of the Datastore Kind.
+- datastore_instance: The Firestore in Datastore mode instance name.
+- indexes_created: List of created indexes for the Datastore kind.
 
 
 
 ## Testing
+```hcl
 terraform validate
 terraform plan -var-file="env.tfvars"
+```
