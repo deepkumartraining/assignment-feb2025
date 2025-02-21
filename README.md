@@ -37,7 +37,7 @@ module "datastore" {
     }
   ]
 }
-
+```
 ## Inputs
 
 project_id: The GCP project ID.
