@@ -1,8 +1,7 @@
-# Terraform.tfvars
-project_id  = "project-id"
-region = "us-central1"
+project_id     = "project-id"
+region         = "us-central1"
 datastore_name = "datastore-assignment"
-kind_name   = "User"
+kind_name      = "User"
 
 indexes = [
   {
