@@ -54,6 +54,7 @@ datastore_instance: The Firestore in Datastore mode instance name.
 indexes_created: List of created indexes for the Datastore kind.
 
 
+
 ## Testing
 terraform validate
 terraform plan -var-file="env.tfvars"
